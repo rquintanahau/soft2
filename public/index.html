@@ -14,14 +14,16 @@
 	</head>
 	<body class="is-preload">
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="//firebase/8.6.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-		 <script src="//firebase/8.6.1/firebase-analytics.js"></script>
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+ 		<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
 
-<!-- Initialize Firebase -->
-		<script src="/__/firebase/init.js"></script>
+		<script>
+		</script>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -135,27 +137,28 @@
 								</section>
 
 							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Inicio</a></li>
-										<li><a href="buscar.html">Buscar profesional</a></li>
-										<li><a href="postular.html">Ofrecer Servicios</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="about.html">Contactanos</a></li>
-										<li><a href="login.html">Iniciar Sesion</a></li>
-									</ul>
-								</nav>
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="index.html">Inicio</a></li>
+									<li><a href="buscar.html">Buscar profesional</a></li>
+									<li><a href="postular.html">Ofrecer Servicios</a></li>
+
+									<li><a href="about.html">Contactanos</a></li>
+									<li><a class="logged-out" href="login.html">Iniciar Sesion</a></li>
+
+									<li>
+										<span class="opener logged-in">Mi Cuenta</span>
+										<ul>
+											<li><a href="perfil.html">Ver Mi Perfil</a></li>
+										</ul>
+									</li>
+
+									<li><a class="logged-in" href="login.html" id ="logout11">Cerrar Sesion</a></li>
+								</ul>
+							</nav>
 
 							<!-- Section -->
 								<section>
@@ -207,6 +210,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script src="assets/js/check.js"></script>
 
 	</body>
 </html>

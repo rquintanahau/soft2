@@ -59,87 +59,33 @@
 								</header>
 
                 <!-- Content -->
-  								<section>
-  									<header class="main">
-                      <h3><input type="button" onClick="document.getElementById('middle').scrollIntoView();" value= "¿No tienes cuenta? Haz click aqui."/></h3>
-  										<h1>Iniciar Sesion</h1>
-  									</header>
-                    <!-- Form -->
+                <section>
+                  <header class="main">
+                    <h2><div id="nameid">Mi Perfil</div></h2>
+                  </header>
 
+                  <div class="posts">
 
+										<article>
 
-                      <form method="post" action="index.html" id="login-form">
-                        <div class="row gtr-uniform">
-                          <div class="col-6 col-12-xsmall">
-                            <input type="email" name="demo-email" id="login-email" value="" placeholder="Email" />
-                          </div>
-                          <div class="col-6 col-12-xsmall">
-                            <input type="password" name="demo-password" id="login-pass" value="" placeholder="Contraseña" />
-                          </div>
+											<h3>Email: </h3>
+                      <div id = "emailid"></div>
+                      <br>
+                      <h3>Nombre: </h3>
+                      <div id = "nombreid"></div>
+                      <br>
+                      <h3>Bio: </h3>
+                      <div id = "bioid"></div>
+                      <br>
+                      <h3>Foto: </h3>
+                      <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+                      <ul class="actions">
+												<li><a href="#" class="button">Editar</a></li>
+											</ul>
+										</article>
 
-                          <!-- Break -->
-                          <div class="col-12">
-                            <ul class="actions">
-                              <li><input type="submit" value="Iniciar Sesion" class="primary" /></li>
-                              <li><input type="reset" value="Limpiar" /></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </form>
-                      <br>
-                      <br>
-                      <br>
-                      <br>
-                      <br>
-                      <br>
-                      <br>
-                    <!-- Form -->
-                    <div id="middle"></div>
-                      <h3>Crear Cuenta</h3>
-
-                      <form method="post" action="#" id="signup-form">
-                        <div class="row gtr-uniform">
-                          <div class="col-6 col-12-xsmall">
-                            <input type="text" name="demo-name" id="signup-nombre" value="" placeholder="Nombre" />
-                          </div>
-                          <div class="col-6 col-12-xsmall">
-                            <input type="email" name="demo-email" id="signup-email" value="" placeholder="Email" />
-                          </div>
-													<div class="col-6 col-12-xsmall">
-                            <input type="password" name="demo-password" id="signup-pass" value="" placeholder="Contraseña" />
-                          </div>
-													<div class="col-6 col-12-xsmall">
-                            <input type="password" name="demo-password" id="signup-pass2" value="" placeholder="Repetir Contraseña" />
-                          </div>
-                          <!-- Break -->
-                          <div class="col-4 col-12-small">
-                            <input type="radio" id="tipo-cliente" name="demo-priority" checked>
-                            <label for="tipo-cliente">Cliente</label>
-                          </div>
-                          <div class="col-4 col-12-small">
-                            <input type="radio" id="tipo-profesional" name="demo-priority">
-                            <label for="tipo-profesional">Profesional</label>
-                          </div>
-                          <!-- Break -->
-                          <div class="col-6 col-12-small">
-                            <input type="checkbox" id="demo-copy" name="demo-copy">
-                            <label for="demo-copy">Enviar a mi correo notificacion de ofertas</label>
-                          </div>
-                          <!-- Break -->
-                          <div class="col-12">
-                            <textarea name="demo-message" id="signup-bio" placeholder="Biografia (opcional)" rows="6"></textarea>
-                          </div>
-                          <!-- Break -->
-                          <div class="col-12">
-                            <ul class="actions">
-                              <li><input type="submit" value="Crear" class="primary" /></li>
-                              <li><input type="reset" value="Limpiar" /></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </form>
-
-  								</section>
+									</div>
+                </section>
             </div>
           </div>
 
@@ -228,8 +174,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/auth.js"></script>
-
-			<script src="assets/js/check.js"></script>
+      <script src="assets/js/perfil.js"></script>
 	</body>
 </html>

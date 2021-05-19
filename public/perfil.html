@@ -80,10 +80,33 @@
                       <h3>Foto: </h3>
                       <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
                       <ul class="actions">
-												<li><a href="#" class="button">Editar</a></li>
+												<li><a href="#" class="button editbutton" >Editar</a></li>
 											</ul>
 										</article>
-
+										<article>
+											<div class="editf">
+												<form method="post" action="#" id="edit-form">
+													<div class="row gtr-uniform">
+														<div class="col-6 col-12-xsmall">
+															<h3>Nombre: </h3>
+															<input type="text" name="demo-name" id="edit-nombre" value="" placeholder="" />
+														</div>
+														<!-- Break -->
+														<div class="col-12">
+															<h3>Biografia: </h3>
+															<textarea name="demo-message" id="edit-bio" placeholder="" rows="6"></textarea>
+														</div>
+														<!-- Break -->
+														<div class="col-12">
+															<ul class="actions">
+																<li><input type="submit" value="Actualizar" class="primary" /></li>
+																<li><input type="reset" value="Limpiar" /></li>
+															</ul>
+														</div>
+													</div>
+												</form>
+											</div>
+										</article>
 									</div>
                 </section>
             </div>
@@ -117,6 +140,7 @@
 											<span class="opener logged-in">Mi Cuenta</span>
 											<ul>
 												<li><a href="perfil.html">Ver Mi Perfil</a></li>
+												<li><a href="perfil.html">Ver Mis Calificaciones</a></li>
 											</ul>
 										</li>
 

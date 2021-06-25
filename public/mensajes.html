@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="esconder();">
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
 
@@ -58,88 +58,62 @@
 										<li><a href="https://www.instagram.com/franko1508/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 									</ul>
 								</header>
-
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Bienvenido<br />
-											a HomeHelp</h1>
-											<p>¡Haz realidad tu siguiente proyecto hoy!</p>
-										</header>
-										<p>Somos la plataforma digital que conecta profesionales con clientes, transformando su talento en logros.</p>
-										<ul class="actions">
-											<li><a href="#" class="button big">Aprende Mas</a></li>
-										</ul>
-									</div>
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-								</section>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Beneficios</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Calidad Asegurada</h3>
-												<p>Todos los profesionales que ofrecen sus servicios en nuestra plataforma, pasan por un riguroso proceso de selección que garantiza un gran nivel de calidad.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Seguimiento constante</h3>
-												<p>Despues que se contrate a un profesional, la plataformas se asegurara de que el profesional cumpla con el trabajo y el cliente este satisfecho.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Elige como pagas</h3>
-												<p>Nuestra plataforma acepta todo tipo de medios de pagos, ya sea efectivo o tarjetas de credito.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Multiples especialidades</h3>
-												<p>Ecuentra el profesional que necesitas en un solo lugar gracias al catalogo mas largo y diverso en todo el mercado!</p>
-											</div>
-										</article>
-									</div>
-								</section>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Clientes Satisfechos</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>Jean Pierre Soto</h3>
-											<p>"En HomeHelp pude encontrar una gran variedad de diseñadores gráficos y al final pudimos sacar a flote una presentación corporativa muy rápida, súper dinámica y bastante bonita"</p>
+                <section>
+                  <h2 id="elements">Mensajes</h2>
+                      <!-- Table -->
 											<ul class="actions">
-												<li><a href="#" class="button">Más</a></li>
+												<li><a href="#" class="button enviarbutton" >Crear Mensaje</a></li>
 											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<h3>Matias Lopez</h3>
-											<p>“No pierdan tiempo en su búsqueda. En HomeHelp van a tener contacto con freelancers con talento que van a ayudarlos con temas de diseño, branding, páginas web y más” </p>
-											<ul class="actions">
-												<li><a href="#" class="button">Más</a></li>
-											</ul>
-										</article>
+                        <div class="table-wrapper">
+                          <table class="alt" id="tablaid">
+                            <thead>
+                              <tr>
+                                <th>Nombre</th>
+                                <th>Asunto</th>
+                                <th>Estado</th>
+                              </tr>
+                            </thead>
+                            <tbody id="tablamensajes">
 
-									</div>
-								</section>
+                            </tbody>
+                          </table>
+                        </div>
 
+
+
+                      <!-- Box -->
+                        <h3 id="asuntoynombre" class="verf"></h3>
+                        <div class="box" class="verf">
+                          <p id="contenido" class="verf"></p>
+                        </div>
+                        <ul class="actions verf">
+  												<li><a href="#" class="button responderbutton" >Responder</a></li>
+  											</ul>
+                        <div class="responderf">
+                        <form method="post" action="#" id="message-form">
+													<div class="row gtr-uniform">
+														<div class="col-6 col-12-xsmall">
+															<h3>Enviar Mensaje: </h3>
+															<input type="text" name="demo-name" id="message-name" placeholder="Enviar a:" />
+                              <br>
+															<input type="text" name="demo-name" id="message-asunto"  placeholder="Asunto" />
+														</div>
+														<!-- Break -->
+														<div class="col-12">
+															<h3>Cuerpo: </h3>
+															<textarea name="demo-message" id="message-cuerpo" placeholder="" rows="6"></textarea>
+														</div>
+														<!-- Break -->
+														<div class="col-12">
+															<ul class="actions">
+																<li><input type="submit" value="Enviar" class="primary" /></li>
+																<li><input type="reset" value="Limpiar" /></li>
+															</ul>
+														</div>
+													</div>
+												</form>
+                        </div>
+                </section>
 						</div>
 					</div>
 
@@ -230,7 +204,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+      <script src="assets/js/mensajes.js"></script>
 			<script src="assets/js/check.js"></script>
 
 	</body>

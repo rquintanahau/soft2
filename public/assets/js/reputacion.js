@@ -8,35 +8,20 @@ const setupUI=(user) => {
   if(user){
     loggedInLinks.forEach(item => item.style.display = 'block');
     loggedOutLinks.forEach(item => item.style.display = 'none');
-    espelinks.forEach(item => item.style.display = 'none');
   } else {
     loggedInLinks.forEach(item => item.style.display = 'none');
     loggedOutLinks.forEach(item => item.style.display = 'block');
   }
 
 };
-const emailinfo = document.querySelector('#emailid');
-const nombreinfo = document.querySelector('#nombreid');
-const bioinfo = document.querySelector('#bioid');
-const especialidadinfo = document.querySelector('#especialidadid');
+const repuinfo = document.querySelector('#repuid');
 firebase.auth().onAuthStateChanged(function(user) {
   if (user!= null) {
     console.log("1");
     setupUI(user);
     db.collection('users').doc(user.uid).get().then(doc =>{
-      const html = `${user.email}`;
-      const bio = `${doc.data().bio}`;
-      const name = `${doc.data().nombre}`;
-      var espe = "";
-      if (doc.data().tipo == 'Profesional')
-      {
-        espelinks.forEach(item => item.style.display = 'block');
-        espe = `${doc.data().especialidad}`;
-      }
-      emailinfo.innerHTML = html;
-      nombreinfo.innerHTML = name;
-      bioinfo.innerHTML = bio;
-      especialidadinfo.innerHTML = espe;
+      const bio = `${doc.data().reputacion}`;
+      repuinfo.innerHTML = bio;
     })}
    else {
     console.log("0");
@@ -45,26 +30,33 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
+const tabla = document.querySelector('#tablamensajes');
 
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user!= null) {
+    user = firebase.auth().currentUser;
+    var withcomas=[];
+    var ee = user.uid;
+    var ee = ee.concat(",repu");
+    db.collection(ee).get().then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data());
+      var asun =doc.data().calificacion;
+      var esta=doc.data().mensaje;
+      var newq ="<tr><td>".concat(asun,"</td><td>",esta,"</td></tr>");
+      tabla.innerHTML =tabla.innerHTML.concat(newq);
+      
+    });});};
+
+  });
 
 const setupEdit =document.querySelector('.editbutton');
 setupEdit.addEventListener('click', (e) => {
   editLinks.forEach(item => item.style.display = 'block');
   });
 
-
-const editform = document.querySelector('#edit-form');
-editform.addEventListener('submit', (e) => {
-  e.preventDefault();
-  user = firebase.auth().currentUser;
-  db.collection('users').doc(user.uid).update({
-    nombre: editform['edit-nombre'].value,
-    bio: editform['edit-bio'].value
-  }).then(() =>{
-    editform.reset();
-    window.location.reload();
-  });
-  });
 
 
   const logout1 =document.querySelector('#logout11');

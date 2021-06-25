@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" >
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
 
@@ -97,7 +97,7 @@
                     <div id="middle"></div>
                       <h3>Crear Cuenta</h3>
 
-                      <form method="post" action="#" id="signup-form">
+                      <form method="post" action="#" id="signup-form" name="formlogin">
                         <div class="row gtr-uniform">
                           <div class="col-6 col-12-xsmall">
                             <input type="text" name="demo-name" id="signup-nombre" value="" placeholder="Nombre" />
@@ -112,19 +112,32 @@
                             <input type="password" name="demo-password" id="signup-pass2" value="" placeholder="Repetir Contraseña" />
                           </div>
                           <!-- Break -->
-                          <div class="col-4 col-12-small">
-                            <input type="radio" id="tipo-cliente" name="demo-priority" checked>
-                            <label for="tipo-cliente">Cliente</label>
-                          </div>
-                          <div class="col-4 col-12-small">
-                            <input type="radio" id="tipo-profesional" name="demo-priority">
-                            <label for="tipo-profesional">Profesional</label>
-                          </div>
-                          <!-- Break -->
-                          <div class="col-6 col-12-small">
-                            <input type="checkbox" id="demo-copy" name="demo-copy">
-                            <label for="demo-copy">Enviar a mi correo notificacion de ofertas</label>
-                          </div>
+													<div class="col-12">
+														<select name="demo-category" id="signup-tipo">
+															<option value="">- Tipo de Cuenta -</option>
+															<option value="1">Cliente</option>
+															<option value="2">Profesional</option>
+														</select>
+													</div>
+													<div class="col-4 col-12-small">
+														<input type="radio" id="cliente" name="demo-priority" value="Cliente" checked>
+														<label for="cliente">Cliente</label>
+													</div>
+													<div class="col-4 col-12-small">
+														<input type="radio" id="profe" name="demo-priority" value="Profesional">
+														<label for="profe">Profesional</label>
+													</div>
+													<div class="col-12 espef" >
+														<select name="demo-category"  id="demo-category" >
+															<option value="">- Categorias -</option>
+															<option value="Electricista">Electricista</option>
+															<option value="Cerrajeria">Cerrajeria</option>
+															<option value="Pintura">Pintura</option>
+															<option value="Vidrieria">Vidrieria</option>
+															<option value="Limpieza">Limpieza</option>
+															<option value="Mudanza">Mudanza</option>
+														</select>
+													</div>
                           <!-- Break -->
                           <div class="col-12">
                             <textarea name="demo-message" id="signup-bio" placeholder="Biografia (opcional)" rows="6"></textarea>
@@ -171,11 +184,12 @@
 											<span class="opener logged-in">Mi Cuenta</span>
 											<ul>
 												<li><a href="perfil.html">Ver Mi Perfil</a></li>
-												<li><a href="perfil.html">Ver Mis Calificaciones</a></li>
+												<li><a href="reputacion.html">Ver Mi Reputación</a></li>
+												<li><a href="mensajes.html">Ver Mis Mensajes</a></li>
 											</ul>
 										</li>
 
-										<li><a class="logged-in" href="login.html" id ="logout11">Cerrar Sesion</a></li>
+										<li><a class="logged-in" id ="logout11">Cerrar Sesion</a></li>
 									</ul>
 								</nav>
 

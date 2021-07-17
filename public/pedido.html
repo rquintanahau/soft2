@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="esconder();">
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
 
@@ -59,85 +59,72 @@
 								</header>
 
                 <!-- Content -->
-								<section>
-									<!--<header class="main">
-										<h2>Pedidos</h2	>
-									</header>-->
 
-									<!-- Content -->
-										<div class="row">
-											<div class="col-4 col-12-medium">
-												<form name="formlogin">
-												<h3>Filtrar por Especialidad: </h3><hr>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Todos" name="demo-priority" value="Todos" checked>
-													<label for="Todos">Todos</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Mudanza" name="demo-priority" value="Mudanza">
-													<label for="Mudanza">Mudanza</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Limpieza" name="demo-priority" value="Limpieza">
-													<label for="Limpieza">Limpieza</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Vidrieria" name="demo-priority" value="Vidrieria">
-													<label for="Vidrieria">Vidrieria</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Pintura" name="demo-priority" value="Pintura">
-													<label for="Pintura">Pintura</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Cerrajeria" name="demo-priority" value="Cerrajeria">
-													<label for="Cerrajeria">Cerrajeria</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Electricista" name="demo-priority" value="Electricista">
-													<label for="Electricista">Electricista</label>
-												</div>
-												<hr>
-												<h3>Filtrar por Ubicación: </h3>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Todos" name="demo-priority2" value="Todos" checked>
-													<label for="Todos">Todos</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Surco" name="demo-priority2" value="Surco">
-													<label for="Surco">Surco</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="San Borja" name="demo-priority2" value="San Borja">
-													<label for="San Borja">San Borja</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Miraflores" name="demo-priority2" value="Miraflores">
-													<label for="Miraflores">Miraflores</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Barranco" name="demo-priority2" value="Barranco">
-													<label for="Barranco">Barranco</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="Magdalena" name="demo-priority2" value="Magdalena">
-													<label for="Magdalena">Magdalena</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="La Molina" name="demo-priority2" value="La Molina">
-													<label for="La Molina">La Molina</label>
-												</form>
-												</div>
-											</div>
+                  <section>
+                    <header class="main">
+                      <h2><div id="tituloid"></div></h2>
+                    </header>
 
-											<div class="col-8 col-12-medium">
-												<h3>Buscar: </h3><hr>
-												<p id="tablamensajess"></p>
+                    <div class="posts">
 
-											</div>
-										</div>
-									<hr class="major" />
-								</section>
+  										<article>
+
+  											<h3>Especialidad: </h3>
+                        <div id = "espeid"></div>
+                        <br>
+                        <h3>Ubicacion: </h3>
+                        <div id = "ubiid"></div>
+                        <br>
+                        <h3>Descripción: </h3>
+                        <div id = "descid"></div>
+                        <br>
+                        <ul class="actions">
+  												<li><a href="#" class="button contratarbutton" >Contratar</a></li>
+  											</ul>
+  										</article>
+  										<article>
+                        <h3>Nombre: </h3>
+                        <div id = "espeid2"></div>
+                        <br>
+                        <h3>Especialidad: </h3>
+                        <div id = "ubiid2"></div>
+                        <br>
+                        <h3>Reputación: </h3>
+                        <div id = "repid2"></div>
+                        <br>
+                        <h3>Descripción: </h3>
+                        <div id = "descid2"></div>
+                        <br>
+                        <ul class="actions">
+  												<li><a href="#" class="button mensajebutton" >Enviar Mensaje</a></li>
+  											</ul>
+  										</article>
+  									</div>
+                    <div class="responderf">
+                    <form method="post" action="#" id="message-form">
+                      <div class="row gtr-uniform">
+                        <div class="col-6 col-12-xsmall">
+                          <h3>Enviar Mensaje: </h3>
+                          <input type="text" name="demo-name" id="message-name" placeholder="Enviar a:" />
+                          <br>
+                          <input type="text" name="demo-name" id="message-asunto"  placeholder="Asunto" />
+                        </div>
+                        <!-- Break -->
+                        <div class="col-12">
+                          <h3>Cuerpo: </h3>
+                          <textarea name="demo-message" id="message-cuerpo" placeholder="" rows="6"></textarea>
+                        </div>
+                        <!-- Break -->
+                        <div class="col-12">
+                          <ul class="actions">
+                            <li><input type="submit" value="Enviar" class="primary" /></li>
+                            <li><input type="reset" value="Limpiar" /></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </form>
+                    </div>
+								  </section>
             </div>
           </div>
 
@@ -228,7 +215,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/buscar.js"></script>
+			<script src="assets/js/pedido.js"></script>
 			<script src="assets/js/check.js"></script>
 
 	</body>
